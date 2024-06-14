@@ -82,6 +82,8 @@ button:hover {
             <button type="submit" name="operation" value="sumar">Sumar</button>
             <button type="submit" name="operation" value="restar">Restar</button>
             <button type="submit" name="operation" value="multiplicar">Multiplicar</button>
+            <button type="submit" name="operation" value="dividir">Dividir</button>
+
 
         </div>
 
@@ -112,6 +114,11 @@ button:hover {
                 echo "<h2>Resultado de la Resta: $resultado</h2>";
             } elseif ($operation == "multiplicar"){
                 $resultado = $num1 * $num2;
+                echo "<h2>Resultado de la multiplicacion: $resultado</h2>";
+            }elseif ($operation == "dividir"){
+                if($num2 != 0)
+                $resultado = $num1 / $num2;
+                echo "<h2>Resultado de la division: $resultado</h2>";
             }else {
                 echo "<h2>Operación no válida</h2>";
             }
